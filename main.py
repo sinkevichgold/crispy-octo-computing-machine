@@ -1,3 +1,8 @@
+import os
+
+import telebot
+import flask
+import requests
 import nltk
 import random
 import json
@@ -7,7 +12,18 @@ from sklearn.model_selection import train_test_split
 import logging
 from telegram import Update
 from telegram.ext import Updater, CommandHandler, Filters, CallbackContext, MessageHandler
+from aiogram import Bot, Dispatcher, executor, types
+from aiogram.types import ReplyKeyboardMarkup, ReplyKeyboardRemove, KeyboardButton
+from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
+#TOKEN =
+#APP_URL =
+#bot = telebot.TeleBot(TOKEN)
+####if __name__ == '__main__':
+    #server.run(host='0.0.0.0.', port = int(os.environ.get('PORT', 5000 )))
+
+bot = Bot(token='5535285847:AAGXWzIDSVTAwyTTgpWj06PXJup1ge-ucxU')
+dp = Dispatcher(bot)
 with open('BIG_BOT_CONFIG.json', 'r') as f:
     BOT_CONFIG = json.load(f)
 
